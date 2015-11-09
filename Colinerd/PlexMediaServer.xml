@@ -29,15 +29,8 @@
   <Repository>colinator/plexmediaserver</Repository>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
-    <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>32400</HostPort>
-        <ContainerPort>32400</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
+  <Networking>
+    <Mode>host</Mode>
   </Networking>
   <Environment>
     <Variable>
@@ -66,6 +59,6 @@
     </Volume>  	
   </Data>
   <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
-  <Banner>https://raw.githubusercontent.com/Colinerd/docker-templates/master/Colinerd/images/plex-banner.png</Banner>
-  <Icon>https://raw.githubusercontent.com/Colinerd/docker-templates/master/Colinerd/images/plex-icon.png</Icon>
+  <Banner>https://raw.githubusercontent.com/colinerd/docker-templates/master/Colinerd/images/plex-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/colinerd/docker-templates/master/Colinerd/images/plex-icon.png</Icon>
 </Containers>
