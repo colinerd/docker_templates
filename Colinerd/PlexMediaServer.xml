@@ -37,7 +37,7 @@
   <Environment>
     <Variable>
       <Name>REMOTE_LOCATION</Name>
-      <Value>put location here as '//servername/video' without quotes</Value>
+      <Value>//servername/video</Value>
     </Variable>
     <Variable>
       <Name>SHARE_USERNAME</Name>
