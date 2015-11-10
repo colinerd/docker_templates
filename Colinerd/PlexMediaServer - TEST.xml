@@ -61,6 +61,6 @@
     </Volume>  	
   </Data>
   <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
-  <Banner>https://raw.githubusercontent.com/colinerd/docker-templates/master/Colinerd/images/plex-banner.png</Banner>
-  <Icon>https://raw.githubusercontent.com/colinerd/docker-templates/master/Colinerd/images/plex-icon.png</Icon>
+  <Banner>https://raw.githubusercontent.com/colinerd/docker_templates/master/Colinerd/images/plex-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/colinerd/docker_templates/master/Colinerd/images/plex-icon.png</Icon>
 </Containers>
