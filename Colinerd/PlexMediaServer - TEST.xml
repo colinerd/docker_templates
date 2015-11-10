@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Beta>False</Beta>
+  <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Name>Colinerd-Plex-TEST</Name>
+  <Description>
+    Plex Media Server docker image with remote share support [br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    This image is based on the limetech/plexmediaserver image. [br]
+	This image will mount a remote samba share if the variables are put in correctly. [br][br]
+	
+	[b]/remotemnt[b] is the folder where the share will be mounted.[br][br]
+
+    REMOTE_LOCATION - specify remote location like this "//remoteserver/media"[br]
+	SHARE_USERNAME - specify username required to access share, use "quest" if not required[br]
+	SHARE_PASSWORD - specify password, leave empty if using guest, do specify when running![br][br]
+
+	
+    [span style='color: #E80000;']32400[/span] is the port used for PLEX[br]
+    To access the Plex GUI, open the WebUI. See the following link for setup instructions: https://github.com/lokenx/plexrequests-meteor/blob/master/README.md [br][br]
+    By default, the latest version is installed.[br]
+  </Description>
+  <Overview>
+    The Plex Media Server enriches your life by organizing all your personal media, presenting it beautifully and streaming it to all of your devices. It's easy to use, it's awesome, and it's free!
+  </Overview>
+  <Support>http://cmict.nl</Support>
+  <Registry>https://hub.docker.com/r/colinator/plexv2/</Registry>
+  <GitHub>https://github.com/colinerd/docker_templates</GitHub>
+  <Repository>colinator/plexv2</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>REMOTE_LOCATION</Name>
+      <Value>//servername/video</Value>
+    </Variable>
+    <Variable>
+      <Name>SHARE_USERNAME</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>SHARE_PASSWORD</Name>
+      <Value></Value>
+    </Variable>
+  </Environment>    
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path to media</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>  	
+  </Data>
+  <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
+  <Banner>https://raw.githubusercontent.com/colinerd/docker-templates/master/Colinerd/images/plex-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/colinerd/docker-templates/master/Colinerd/images/plex-icon.png</Icon>
+</Containers>
