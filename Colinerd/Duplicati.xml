@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Date>2018-07-11</Date>
+  <Beta>False</Beta>
+  <Category>Backup</Category>
+  <Name>Duplicati</Name>
+  <Changes>
+[center][font size=4]Duplicati Change Log[/font][/center]
+
+[font size=3]2018.07.11[/font]
+- Initial Release
+  </Changes>
+  <Description>
+    Duplicati docker image[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    This image is based on the limetech/plexmediaserver image. [br][br]
+	
+    [span style='color: #E80000;']8095[/span] is the port used for Duplicati[br]
+    To access the Duplicati GUI, open the WebUI by browsing to the IP:PORT address.[br][br]
+    By default, this version of Duplicati is installed: LATEST[br]
+  </Description>
+  <Overview>
+    Duplicati allows you to backup data to another location through several transmission protocols.
+  </Overview>
+  <Support>http://colinator.com</Support>
+  <Registry>https://hub.docker.com/r/colinator/plexmediaserver/</Registry>
+  <GitHub>https://github.com/colinerd/docker_templates</GitHub>
+  <Repository>colinator/plexmediaserver</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+    </Publish>
+  </Networking>
+  <Environment>
+  </Environment>    
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path to media</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>  	
+  </Data>
+  <WebUI>http://[IP]:[PORT:8095]</WebUI>
+  <Banner>https://raw.githubusercontent.com/colinerd/docker_templates/master/Colinerd/images/plex-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/colinerd/docker_templates/master/Colinerd/images/plex-icon.png</Icon>
+</Containers>
