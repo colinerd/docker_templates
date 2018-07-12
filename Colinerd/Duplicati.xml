@@ -25,7 +25,7 @@
   <Support>http://colinator.com</Support>
   <Registry>https://hub.docker.com/r/linuxserver/duplicati/</Registry>
   <GitHub>https://github.com/colinerd/docker_templates</GitHub>
-  <Repository>colinator/plexmediaserver</Repository>
+  <Repository>linuxserver/duplicati</Repository>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Networking>
