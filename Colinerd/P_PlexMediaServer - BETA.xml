@@ -20,6 +20,9 @@
 - Initial Release
   </Changes>
   <Description>
+    [font size=3]2018.07.15[/font]
+    - Updated to Plex version 1.13.2.5154	
+	  
     Plex Media Server docker image with remote share support [br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
     This image is a custom build based on the phusion/ubuntu image. [br]
