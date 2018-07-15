@@ -3,7 +3,7 @@
   <Date>2018-07-15</Date>
   <Beta>True</Beta>
   <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
-  <Name>Colinerd-Plex-BETA</Name>
+  <Name>Plex - BETA</Name>
   <Changes>
 [center][font size=4]Plex Media Server Change Log[/font][/center]
 
@@ -21,7 +21,7 @@
   </Changes>
   <Description>
     [font size=3]2018.07.15[/font]
-    - Updated to Plex version 1.13.2.5154	
+    - Updated to Plex version 1.13.2.5154 [br][br]	
 	  
     Plex Media Server docker image with remote share support [br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
@@ -35,7 +35,7 @@
 	SHARE_PASSWORD - specify password, leave empty if using guest, do specify when running![br][br]
 
 	
-    [span style='color: #E80000;']32400[/span] is the port used for PLEX[br]
+    [span style='color: #E80000;']32401[/span] is the port used for PLEX[br]
     To access the Plex GUI, open the WebUI. See the following link for setup instructions: https://github.com/lokenx/plexrequests-meteor/blob/master/README.md [br][br]
     By default, the latest version is installed.[br]
   </Description>
@@ -77,7 +77,12 @@
       <HostDir>path to media</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
-    </Volume>  	
+    </Volume>  
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:32401]/web/index.html</WebUI>
   <Banner>https://raw.githubusercontent.com/colinerd/docker_templates/master/Colinerd/images/plex-banner.png</Banner>
